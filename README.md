@@ -10,6 +10,8 @@ ClipWatch finds it automatically in real F1 telemetry.
 
 ## What it found first
 
+![Speed, throttle and brake on Russell's pole lap](docs/melbourne-q.png)
+
 **2026 Australian GP, qualifying, George Russell's pole lap (1:18.518)**
 
 On the longest full-throttle section of Albert Park, the car peaks at about **327 km/h**, then bleeds speed down to about **280 km/h** before the next corner. That is roughly **45 km/h lost** with:
