@@ -1,5 +1,6 @@
 import requests
 import pandas as pd
+from clipwatch.detect import find_clipping
 import matplotlib.pyplot as plt
 
 BASE = "https://api.openf1.org/v1"
@@ -16,7 +17,7 @@ print("Lap", lap["lap_number"], "Time", lap["lap_duration"])
 
 #when the lap took place
 start = pd.to_datetime(lap["date_start"])
-end = start + pd.Timedelta(seconds=lap["lap_duration"])
+end = start + pd.Timedelta(seconds=float(lap["lap_duration"]))
 s = start.strftime("%Y-%m-%dT%H:%M:%S")
 e = end.strftime("%Y-%m-%dT%H:%M:%S")
 
@@ -42,4 +43,7 @@ ax2.set_ylabel("Throttle [%]")
 ax3.plot(tel["distance"], tel["brake"])
 ax3.set_ylabel("Brake [%]")
 ax2.set_xlabel("Distance [m]")
+
+print(find_clipping(tel))
+
 plt.show()
