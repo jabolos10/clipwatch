@@ -36,7 +36,7 @@ That is not driver error, and it is not drag. It is the hybrid system harvesting
 ## Roadmap
 
 - [x] Telemetry exploration: clipping visible in Melbourne qualifying
-- [ ] `find_clipping()` detector
+- [x] `find_clipping()` detector
 - [ ] Unit tests on synthetic telemetry (pytest)
 - [ ] CI: linting (ruff) and tests on every push and pull request (GitHub Actions)
 - [ ] CD: results site auto-built and deployed to GitHub Pages after every Grand Prix
